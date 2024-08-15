@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Form - Dream Travels</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        background-image: url("images/location2.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
+        padding: 30px;
+        width: 500px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        position: relative;
+        color: white;
+      }
+
+      .container h2 {
+        text-align: center;
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      .container form {
+        display: flex;
+        flex-direction: column;
+        width: 450px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+        position: relative;
+      }
+
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 10px;
+        padding-left: 40px;
+        border: purple;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      .form-group i {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: purple;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus {
+        border: 1px solid #4caf50;
+      }
+
+      .form-group input[type="submit"] {
+        background-color: purple;
+        color: white;
+        cursor: pointer;
+      }
+
+      .form-group input[type="submit"]:hover {
+        background-color: green;
+      }
+
+      .back-button {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: #fff;
+        color: purple;
+        padding: 10px 20px;
+        border: 1px solid purple;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .back-button:hover {
+        background-color: purple;
+        color: white;
+      }
+
+      .error {
+        color: red;
+        font-size: 0.9em;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Registration</h2>
+      <form id="bookingForm" action="booking.php" method="post">
+        <div class="form-group">
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="First Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+        <!--  <div class="form-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" placeholder="Email" required maxlength="100">
+            <div class="error" id="emailError"></div>
+        </div>
+        <div class="form-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
+            <div class="error" id="passwordError"></div>
+        </div> -->
+        <!-- <div class="form-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            <div class="error" id="confirmPasswordError"></div>
+        </div> -->
+        <div class="form-group">
+          <i class="fas fa-phone"></i>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="Phone Number"
+            required
+            pattern="[0-9]+"
+          />
+        </div>
+        <div class="form-group">
+          <i class="fas fa-users"></i>
+          <input
+            type="number"
+            id="familyMembers"
+            name="familyMembers"
+            placeholder="Family Members"
+            required
+            min="1"
+          />
+        </div>
+        <div class="form-group">
+          <i class="fas fa-hotel"></i>
+          <select id="destination" name="destination" required>
+            <option value="" disabled selected>Select Destination</option>
+            <option value="hotel1">Hotel 1</option>
+            <option value="hotel2">Hotel 2</option>
+            <option value="hotel3">Hotel 3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <i class="fas fa-car"></i>
+          <select id="carOptions" name="carOptions" required>
+            <option value="" disabled selected>Select Car</option>
+            <option value="brv">BRV</option>
+            <option value="civic">CIVIC</option>
+            <option value="cabin">Cabin</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Submit" />
+        </div>
+        <div class="form-group">
+          <a href="./index.html" class="back-button">Back to Home</a>
+        </div>
+      </form>
+    </div>
+
+    <script>
+    //   document
+    //     .getElementById("bookingForm")
+    //     .addEventListener("submit", function (event) {
+          //event.preventDefault();
+          console.log("Passed register script");
+          // // Clear previous error messages
+          // document.getElementById('emailError').textContent = '';
+          // document.getElementById('passwordError').textContent = '';
+          // document.getElementById('confirmPasswordError').textContent = '';
+
+          // const email = document.getElementById('email').value;
+          // const password = document.getElementById('password').value;
+          // const confirmPassword = document.getElementById('confirmPassword').value;
+
+          // let isValid = true;
+
+          // // Validate email length
+          // if (email.length > 100) {
+          //     document.getElementById('emailError').textContent = 'Email should not exceed 100 characters';
+          //     isValid = false;
+          // }
+
+          // // Validate password pattern
+          // const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$/;
+          // if (!passwordPattern.test(password)) {
+          //     document.getElementById('passwordError').textContent = 'Password must be at least 8 characters long, include at least one number, one special character, and both uppercase and lowercase letters';
+          //     isValid = false;
+          // }
+
+          // // Validate confirm password
+          // if (password !== confirmPassword) {
+          //     document.getElementById('confirmPasswordError').textContent = 'Passwords do not match';
+          //     isValid = false;
+          // }
+
+          // // If valid, submit the form
+          // if (isValid) {
+          //     alert('Form submitted successfully!');
+          //     this.submit();
+          // }
+      //  });
+    </script>
+  </body>
+</html>

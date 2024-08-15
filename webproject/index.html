@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .nav-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(238, 226, 238);
+            padding: 10px;
+        }
+       /* .nav-main ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .nav-main ul li {
+            margin-right: 20px;
+        }
+        .nav-main ul li a {
+            color: rgb(43, 23, 216);
+            text-decoration: none;
+        }  */
+        .nav-main ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .nav-main ul li {
+        margin-right: 20px;
+    }
+
+    .nav-main ul li a {
+        color: rgb(223, 222, 236);
+        text-decoration: none;
+        background-color: purple; /* Purple background color */
+        padding: 10px 15px; /* Adjust padding for better appearance */
+        border-radius: 5px; /* Optional: Rounded corners */
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+    .nav-main ul li a:hover {
+        background-color: rgb(83, 12, 214); /* Darker purple on hover */
+    }
+
+
+
+        .search-container {
+            display: flex;
+        }
+        .search-container input {
+            padding: 5px;
+        }
+        .search-container button {
+            padding: 5px;
+            background-color:  rgb(91, 17, 105);
+            color: rgb(245, 244, 245);
+            border: none;
+        }
+        /*.auth-buttons a {
+            margin-left: 10px;
+            color: rgb(88, 17, 219);
+            text-decoration: none;
+    }*/
+    .auth-buttons a {
+        margin-left: 10px;
+        color: rgb(253, 253, 253);
+        text-decoration: none;
+        background-color: purple; /* Purple background color */
+        padding: 10px 15px; /* Adjust padding for better appearance */
+        border-radius: 5px; /* Optional: Rounded corners */
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+    .auth-buttons a:hover {
+        background-color: rgb(103, 214, 12); /* Darker purple on hover */
+    }
+
+        .main-content {
+            text-align: center;
+            padding: 50px;
+            background-image: url('images/location2.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .booking-button {
+            padding: 10px 20px;
+            background-color: rgb(83, 12, 214);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .booking-button:hover {
+            background-color: green;
+        }
+        .attractions {
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+            width: 100 px;
+        }
+        .attraction-box {
+            margin: 20px;
+        }
+        .attraction-box img {
+            width: 500px;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+        .attraction-box img.flipped {
+            transform: rotateY(180deg);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(70, 6, 70);
+            color: white;
+        }
+        .feedback form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .feedback textarea {
+            width: 80%;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .feedback button {
+            padding: 10px 20px;
+            background-color: purple;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .feedback button:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+   
+    <nav class="nav-main">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destination.html">Destination</a></li>
+            <li><a href="Hotels.html">Hotels</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button type="button" onclick="search()">Search</button>
+        </div>
+        <div class="auth-buttons">
+            <a href="signup.html">Signup</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="welcome-message">
+            <h1>Welcome to Our Dream Travels</h1>
+            <a href="signup.html" class="booking-button">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Attraction Images Section -->
+    <div class="attractions">
+        <div class="attraction-box">
+            <img src="images/Image01.jpg" alt="Image" onclick="flipImage(this)">
+        </div>
+        <div class="attraction-box">
+            <img src="images/image05.jpg" alt="Image" onclick="flipImage(this)">
+        </div>
+        <div class="attraction-box">
+            <img src="images/hotel6.jpg" alt="Image" onclick="flipImage(this)">
+        </div>
+    </div>
+
+    <!-- Footer and Comment/Feedback Section -->
+    <footer>
+        <div class="feedback">
+            <h2>Leave a Comment or Feedback</h2>
+            <form>
+                <textarea placeholder="Write your comments here..."></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <p>&copy; 2024 Tourism Website. All rights reserved By AQSA.</p>
+    </footer>
+
+    <script>
+        // JavaScript for search functionality
+        function search() {
+            var input = document.getElementById("searchInput").value;
+            // Perform search based on input
+            console.log("Searching for: " + input);
+        }
+
+        // JavaScript for flip image functionality
+        function flipImage(img) {
+            img.classList.toggle("flipped");
+        }
+    </script>
+</body>
+</html>

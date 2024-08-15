@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Dream Travels</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images/d1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: green;
+        }
+
+        .about-section {
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.6);
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .about-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .gallery .image {
+            width: 30%;
+            margin: 10px;
+            perspective: 1000px;
+        }
+
+        .gallery .image .flip-card {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .gallery .image .flip-card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .gallery .image .flip-card .flip-card-front,
+        .gallery .image .flip-card .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+
+        .gallery .image .flip-card .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .gallery .image .flip-card .flip-card-back {
+            background-color: purple;
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html" target="_blank">About Us</a>
+    <a href="destination.html">Destinations</a>
+    <a href="booking.html">Booking</a>
+</div>
+
+<div class="about-section">
+    <h1>About Dream Travels</h1>
+    <p>Welcome to Dream Travels! We are your go-to travel experts, dedicated to helping you explore the world and make unforgettable memories. From exotic beach getaways to adventurous mountain treks, we offer a wide range of travel packages tailored to your needs.</p>
+</div>
+
+<div class="gallery">
+    <div class="image">
+        <div class="flip-card">
+            <div class="flip-card-front">
+                <img src="images/hotel02.jpg" alt="Travel Image 1" style="width:100%; height:100%; border-radius: 10px;">
+            </div>
+            <div class="flip-card-back">
+                <p>Beautiful Beach</p>
+            </div>
+        </div>
+    </div>
+    <div class="image">
+        <div class="flip-card">
+            <div class="flip-card-front">
+                <img src="images/hotel3.jpg" alt="Travel Image 2" style="width:100%; height:100%; border-radius: 10px;">
+            </div>
+            <div class="flip-card-back">
+                <p>Mountain Trek</p>
+            </div>
+        </div>
+    </div>
+    <div class="image">
+        <div class="flip-card">
+            <div class="flip-card-front">
+                <img src="images/hotel6.jpg" alt="Travel Image 3" style="width:100%; height:100%; border-radius: 10px;">
+            </div>
+            <div class="flip-card-back">
+                <p>City Tour</p>
+            </div>
+        </div>
+    </div>
+    <div class="image">
+        <div class="flip-card">
+            <div class="flip-card-front">
+                <img src="images/hotel7.jpg" alt="Travel Image 4" style="width:100%; height:100%; border-radius: 10px;">
+            </div>
+            <div class="flip-card-back">
+                <p>Desert Safari</p>
+            </div>
+        </div>
+    </div>
+    <div class="image">
+        <div class="flip-card">
+            <div class="flip-card-front">
+                <img src="images/image0.jpeg" alt="Travel Image 5" style="width:100%; height:100%; border-radius: 10px;">
+            </div>
+            <div class="flip-card-back">
+                <p>Historical Sites</p>
+            </div>
+        </div>
+    </div>
+    <div class="image">
+        <div class="flip-card">
+            <div class="flip-card-front">
+                <img src="images/image05.jpg" alt="Travel Image 6" style="width:100%; height:100%; border-radius: 10px;">
+            </div>
+            <div class="flip-card-back">
+                <p>Wildlife Adventure</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector('.navbar a[href="about.html"]').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'about.html';
+    });
+</script>
+
+</body>
+</html>

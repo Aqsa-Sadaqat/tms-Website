@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images/image0.jpeg');
+            background-size: cover; /* Adjusts the background image to cover the entire container */
+            margin-bottom: 10px;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 50px;
+            border-radius: 50px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 400px; /* Adjust the width as needed */
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+
+        }
+
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .container input[type="submit"] {
+            background-color: purple;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .container input[type="submit"]:hover {
+            background-color: purple;
+        }
+
+        .container .signup-link {
+            text-decoration: none;
+            color: #333;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .container .signup-link:hover {
+            text-decoration: underline;
+        }
+
+        .container .social-icons {
+            margin-top: 20px;
+        }
+
+        .container .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: purple; /* Change social icon color to orange */
+            border: 1px solid purple; /* Change social icon border color to orange */
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .container .social-icons a:hover {
+            background-color: purple;/* Change social icon hover background color to orange */
+            color: white;
+        }
+
+        .container .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: purple; /* Change title color to orange */
+        }
+
+        .container .forgot-password,
+        .container .already-login {
+            margin-top: 10px;
+        }
+
+        /* Style for the back button */
+        .container button {
+            background-color: transparent;
+            border: 1px solid purple;
+            color: purple;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .container button:hover {
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">Dream Travels Management</div>
+    <h2>Login</h2>
+    <form id="loginForm"  action="login.php" method="post">
+            
+
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+    <a href="signup.html" class="signup-link">Don't have an account? Sign Up</a>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p><a href="Forgotpassord.html">Forgot your password?</a></p>
+    <p class="already-login">Already have an account? <a href="#">Log in</a></p>
+    <button onclick="goBack()">Back</button>
+</div>
+
+<script>
+    // JavaScript function to go back to the previous page
+  //  function goBack() {
+     //   window.history.back();
+    //}
+
+    // JavaScript function to handle form submission
+   // document.getElementById("loginForm").addEventListener("submit", function(event){
+        event.preventDefault(); // Prevents the default form submission
+        // Perform login validation or submission here
+        // For now, let's just alert a message
+       // alert("Login form submitted!");
+  //  });
+</script>
+
+</body>
+</html>

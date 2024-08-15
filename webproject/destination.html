@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destinations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/image05.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: purple;
+        }
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: green;
+        }
+        .navbar a:visited {
+            color: lightgray;
+        }
+        .navbar a:active {
+            background-color: green;
+            color: white;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .content-section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .highlight {
+            background-color: rgb(190, 173, 211);
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="home-button">
+        <a href="index.html" onclick="showAlert()">Home</a>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Kashmir 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#hotels-kashmir" onclick="highlightSection('hotels-kashmir')">Hotels</a>
+            <a href="#activities-kashmir" onclick="highlightSection('activities-kashmir')">Activities</a>
+            <a href="#dining-kashmir" onclick="highlightSection('dining-kashmir')">Dining</a>
+        </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Hunza 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#hotels-hunza" onclick="highlightSection('hotels-hunza')">Hotels</a>
+            <a href="#activities-hunza" onclick="highlightSection('activities-hunza')">Activities</a>
+            <a href="#dining-hunza" onclick="highlightSection('dining-hunza')">Dining</a>
+        </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Swat 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#hotels-swat" onclick="highlightSection('hotels-swat')">Hotels</a>
+            <a href="#activities-swat" onclick="highlightSection('activities-swat')">Activities</a>
+            <a href="#dining-swat" onclick="highlightSection('dining-swat')">Dining</a>
+        </div>
+    </div> 
+</div>
+
+<div class="content-section" id="hotels-kashmir">
+    <h2>Hotels in Kashmir</h2>
+    <p>Details about hotels in Kashmir.</p>  
+    <ol>
+        <li><p>Hotel Alpine</p></li> 
+        <li><p>The City Hotel of Kashmir Valley</p></li> 
+        <li><p>The Kashmir Valla</p></li> 
+    </ol>
+</div>
+
+<div class="content-section" id="activities-kashmir">
+    <h2>Activities in Kashmir</h2>
+    <p>Details about activities in Kashmir.</p>
+    <ol>
+        <li><h4>Shikara Ride on Dal Lake</h4></li>
+        <p>Glide along the tranquil waters of Dal Lake in a traditional wooden shikara, marveling at the stunning views of the surrounding mountains, lush gardens, and floating markets. This iconic experience allows you to soak in the serene atmosphere and witness everyday life on the lake.</p>
+        <li><h4>Houseboat Stay</h4></li>
+        <p>Immerse yourself in the unique charm of Kashmir by staying in a luxurious houseboat on Dal Lake or Nigeen Lake. These intricately crafted floating homes offer a blend of comfort and tradition, with ornate woodwork, cozy interiors, and panoramic views of the surrounding landscape.</p>
+        <li><h4>Trekking in the Himalayas</h4></li>
+        <p>Embark on an exhilarating trekking adventure amidst the majestic peaks of the Himalayas. Kashmir offers a variety of trekking routes catering to all skill levels, from gentle hikes through picturesque valleys to challenging expeditions to high-altitude mountain passes.</p>
+    </ol>
+</div>
+
+<div class="content-section" id="dining-kashmir">
+    <h2>Dining in Kashmir</h2>
+    <p>Details about dining in Kashmir.</p>
+    <ul>
+        <li>Halwa Puri</li>
+        <li>Chicken Tikka</li>
+        <li>Biryani</li>
+    </ul>
+</div>
+
+<div class="content-section" id="hotels-hunza">
+    <h2>Hotels in Hunza</h2>
+   
+<div class="content-section" id="hotels-hunza">
+    <h2>Hotels in Hunza</h2>
+    <p>Details about hotels in Hunza.</p>
+    <ol>
+        <li><p>The City Hotel</p></li> 
+        <li><p>Luxus Hunza Attabad Lake Resort</p></li> 
+    </ol>
+</div>
+
+<div class="content-section" id="activities-hunza">
+    <h2>Activities in Hunza</h2>
+    <p>Details about activities in Hunza.</p>
+    <ol>
+        <li><h4>Scenic Drives</h4></li>
+        <p>Embark on a picturesque road trip to Hunza, traversing the legendary Karakoram Highway (KKH). Marvel at the dramatic landscapes as you wind your way through rugged mountains, deep valleys, and alongside rushing rivers.</p>
+    </ol>
+</div>
+
+<div class="content-section" id="dining-hunza">
+    <h2>Dining in Hunza</h2>
+    <p>Details about dining in Hunza.</p>
+    <ul>
+        <li>Chowmein</li>
+        <li>Chicken Karahi</li>
+    </ul>
+</div>
+
+<div class="content-section" id="hotels-swat">
+    <h2>Hotels in Swat</h2>
+    <p>Details about hotels in Swat.</p>
+    <ol>
+        <li><p>The City Hotel</p></li> 
+        <li><p>Swat Luxury Villa Hotel</p></li> 
+        <li><p>Swat Alpine Hotel</p></li> 
+    </ol>
+</div>
+
+<div class="content-section" id="activities-swat">
+    <h2>Activities in Swat</h2>
+    <p>Details about activities in Swat.</p>
+    <ol>
+        <li><h4>Malam Jabba</h4></li>
+        <p>Malam Jabba is a renowned ski resort and one of Pakistan's premier destinations for winter sports. Nestled in the Hindu Kush mountain range, it offers facilities for skiing, snowboarding, and other snow-related activities.</p>
+        <li><h4>Kalam Valley</h4></li>
+        <p>Kalam Valley, situated at an altitude of about 6,800 feet, is a major tourist attraction known for its stunning natural beauty. The valley is surrounded by snow-capped mountains, dense forests, and beautiful lakes.</p>
+        <li><h4>Saidu Sharif</h4></li>
+        <p>Saidu Sharif, the administrative capital of Swat, is rich in cultural heritage and historical sites. It houses the Swat Museum, which showcases a collection of Gandhara art, ancient artifacts, and Buddhist sculptures.</p>
+    </ol>
+</div>
+
+<div class="content-section" id="dining-swat">
+    <h2>Dining in Swat</h2>
+    <p>Details about dining in Swat.</p>
+    <ul>
+        <li>BBQ</li>
+        <li>Chicken Tikka</li>
+        <li>Biryani</li>
+    </ul>
+</div>
+
+<script>
+    function showAlert() {
+        alert("You clicked the Home button!");
+    }
+
+    function highlightSection(sectionId) {
+        // Remove highlight from all content sections
+        var contentSections = document.querySelectorAll('.content-section');
+        contentSections.forEach(function(section) {
+            section.classList.remove('highlight');
+        });
+        
+        // Highlight the clicked section
+        var targetSection = document.getElementById(sectionId);
+        targetSection.classList.add('highlight');
+    }
+</script>
+
+</body>
+</html>

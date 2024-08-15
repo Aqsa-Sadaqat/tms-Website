@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Hotels</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       color: white;
+    }
+
+    
+
+    .header {
+        background-color: purple;
+        padding: 5px;
+        text-align: center;
+        position: relative;
+    }
+
+    .header h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .hotel {
+        border: 1px solid #7c1010;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .hotel img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hotel-details {
+        padding: 10px;
+    }
+
+    .hotel-title {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        padding: 10px;
+        background-color: #9355a0;
+        border-top: 1px solid #ffffff;
+    }
+
+    .dropdown-btn {
+        background-color: purple;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .dropdown-btn:hover {
+        background-color: purple;
+    }
+
+    .dropdown-btn:after {
+        content: '\25bc';
+        float: right;
+    }
+
+    .dropdown-btn.active:after {
+        content: '\25b2';
+    }
+    .back-button, .login-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .back-button:hover, .login-button:hover {
+            background-color: blue;
+        }
+</style>
+<script>
+    function toggleDropdown(element) {
+        const dropdownContent = element.nextElementSibling;
+        const isActive = dropdownContent.style.display === 'block';
+        document.querySelectorAll('.dropdown-content').forEach(content => {
+            content.style.display = 'none';
+        });
+        document.querySelectorAll('.dropdown-btn').forEach(button => {
+            button.classList.remove('active');
+        });
+        if (!isActive) {
+            dropdownContent.style.display = 'block';
+            element.classList.add('active');
+        }
+    }
+</script>
+</head>
+<body>
+
+<div class="header" >
+    <h1>Dream Travels luxurious Hotels</h1>
+
+    <a href="index.html" class="back-button">Back to Home</a>
+</div>
+
+<div class="container">
+    <!-- Hotel 1 -->
+    <div class="hotel">
+        <img src="images/d3.jpg" alt="Hotel 1">
+        <div class="hotel-details">
+            <h2 class="hotel-title">Hotel Sunshine</h2>
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">More Info</button>
+            <div class="dropdown-content">
+            <ol>
+                    <h2>Hotel Mountain View</h2>
+                    <li>  <p><strong>Rating:</strong> 7.4/10 Good</p></li>
+                        <li>  <p><strong>Price:</strong> Rs/-134 per night (discounted from $189)</p></li>
+                            <li> <p><strong>Features:</strong> This eco-friendly luxury hotel offers a sophisticated stay with nature-inspired designs, emphasizing sustainability. Guests can enjoy amenities like a rooftop bar with stunning city views, a farm-to-table restaurant, and a wellness spa. It's an ideal choice for travelers looking to experience Nashville in a luxurious and environmentally conscious setting.</p></li>
+                                <li> <p><strong>Location:</strong> Located in kashmir, pakistan, with easy access to downtown Los Angeles and major attractions like the Staples Center and Griffith Observatory.</p></li>
+            </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hotel 2 -->
+    <div class="hotel">
+        <img src="images/d2.jpg" alt="Hotel 2">
+        <div class="hotel-details">
+            <h2 class="hotel-title">Hotel Mountain View</h2>
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">More Info</button>
+            <div class="dropdown-content">
+                <ol>
+                    <h2>Hotel Sunshine</h2>
+                    <li> <p><strong>Rating:</strong> 7.4/10 Good</p></li>
+                    <li> <p><strong>Price:</strong> Rs/-134 per night (discounted from $189)</p></li>
+                    <li><p><strong>Features:</strong> This hotel offers a unique blend of gaming and luxury accommodations. It features one of the largest poker casinos in the world, along with several dining options, a full-service spa, and an outdoor pool. It's a great option for travelers interested in a mix of gaming and relaxation.</p> </li>
+                    <li> <p><strong>Location:</strong> Located in Sawat, pakistan, with easy access to downtown Los Angeles and major attractions like the Staples Center and Griffith Observatory.</p> </li>
+               </ol> 
+            </div>
+        </div>
+    </div>
+
+    <!-- Hotel 3 -->
+    <div class="hotel">
+        <img src="images/d1.jpg" alt="Hotel 3">
+        <div class="hotel-details">
+            <h2 class="hotel-title">Hotel Beachside</h2>
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">More Info</button>
+            <div class="dropdown-content">
+                  <h2>Hotel Beachside</h2> 
+                    <ol>
+                        <li>  <p><strong>Rating:</strong> 7.4/10 Good</p> </li>
+                        <li><p><strong>Price:</strong> Rs/-134 per night (discounted from $189)</p></li>
+                            <li>  <p><strong>Features:</strong> Located in the heart of San Diego's Gaslamp Quarter, this hotel offers a laid-back yet upscale experience. The property boasts a rooftop pool with panoramic views of the city, multiple dining options including a signature Margaritaville Restaurant, and vibrant decor reflecting the spirit of the tropics. It's perfect for those seeking a fun and relaxing urban retreat.</p></li>
+                                <li> <p><strong>Location:</strong> Located in Hunza, pakistan, with easy access to downtown Los Angeles and major attractions like the Staples Center and Griffith Observatory.</p></li>
+                        
+                    </ol>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
